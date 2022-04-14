@@ -1,4 +1,5 @@
 <?php
+require("vues/modele.inc.php");
 
 $titre = "Bienvenue sur la page d'accès aux contacts";
 $titrePage = "ACCEUIL";
@@ -28,6 +29,24 @@ switch($action){
         require("vues/view_header.php");
         require("vues/view_listeContacts.php");
         require("vues/view_footer.html");
+        break;
+    case 'ajouter':
+        var_dump($_GET);
+        $titre = "Ajouter un nouveau contact";
+        $titrePage = "AJOUT";
+        require("vues/view_header.php");
+        require("vues/view_formulaire.php");
+        require("vues/view_footer.html");
+        break;
+    case 'ajoutNouveauContactOK':
+        var_dump($_GET);
+        $titre = "Bienvenue sur la page d'accès aux contacts";
+        $titrePage = "ACCEUIL";
+        addContact($listeContact);
+        echo "nouveau contact ajouté";
+        echo "\n".$_GET['prenom'] .";". $_GET['nom'] .";" . $_GET['telephone'];
+        require("vues/view_header.php");
+        require("vues/view_accueil.php");
         break;
 }
 
