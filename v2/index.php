@@ -25,6 +25,7 @@ switch ($action) {
         require('vues/view_footer.php');
         break;
     case 'listeContacts':
+        $listeContacts = getListContacts($ficher['fichierContacts']);
         $sTitre = "LISTE";
         $sTitrePAge = "La liste des contacts";
         require('vues/view_header.php');
@@ -32,9 +33,3 @@ switch ($action) {
         require('vues/view_footer.php');
         break;
 }
-
-
-require_once("modele.inc.php");
-
-
-require_once("vues/view_footer.php");
