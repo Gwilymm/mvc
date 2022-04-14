@@ -1,7 +1,7 @@
 <?php
 ?>
 <form action="" method="GET">
-        <a href="vues/view_listeContacts.php"><input name="liste" type="submit" value="Afficher"></a>
-        <a href=""><input name="ajout" type="submit" value="Ajouter"></a>
-        <a href=""><input name="suppression" type="submit" value="Supprimer"></a>
+        <a href="index.php?action=liste"><input type="button" value="Afficher"></a>
+        <a href="index.php?action=ajouter"><input type="button" value="Ajouter"></a>
+        <a href="index.php?action=supprimer"><input type="button" value="Supprimer"></a>
 </form>
