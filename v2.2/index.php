@@ -31,7 +31,7 @@ switch ($action) {
         require("vues/view_footer.html");
         break;
     case 'ajouter':
-        var_dump($_GET);
+
         $titre = "Ajouter un nouveau contact";
         $titrePage = "AJOUT";
         require("vues/view_header.php");
@@ -39,7 +39,6 @@ switch ($action) {
         require("vues/view_footer.html");
         break;
     case 'ajoutNouveauContactOK':
-        var_dump($_GET);
         $titre = "Bienvenue sur la page d'accès aux contacts";
         $titrePage = "ACCEUIL";
         addContact($listeContact);
@@ -69,6 +68,14 @@ switch ($action) {
         require("vues/view_header.php");
         supprimerContact($listeContact);
         require("vues/view_supprimerContact.php");
+        require("vues/view_footer.html");
+        break;
+    case 'modifierContact':
+        $titre = "Modifier un contact";
+        $titrePage = "Modification";
+        require("vues/view_header.php");
+        modifierContact($listeContact);
+        require("vues/view_modifierContact.php");
         require("vues/view_footer.html");
         break;
 }

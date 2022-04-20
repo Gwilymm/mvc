@@ -15,6 +15,6 @@
     <a href="index.php?action=rechercheContactOK">
         <input type="hidden" name="action" value="rechercheContactOK">
     </a>
-    <input type="submit" value="Rechercher">
+    <input type="submit" id="rechercher" value="Rechercher">
     <br />
 </form>
